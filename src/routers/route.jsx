@@ -1,12 +1,13 @@
 import {
     createBrowserRouter,
 } from "react-router-dom";
+import LandingPage from "../features/LandingPage";
 
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <div className="">Hello world!</div>,
+        element: <LandingPage></LandingPage>,
     },
 ]);
 
