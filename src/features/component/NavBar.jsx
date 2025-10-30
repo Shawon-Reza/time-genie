@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
+import logo from "../../assets/logo.png"
+import { useNavigate } from 'react-router-dom'
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const navigate = useNavigate()
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -20,18 +23,16 @@ const NavBar = () => {
   }
 
   return (
-    <nav className="relative bg-slate-800 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="relative  text-white">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 lg:w-12 lg:h-12 bg-yellow-500 rounded-md flex items-center justify-center font-bold text-slate-800">
-              <span className="text-lg lg:text-xl">TS</span>
-            </div>
-            <div>
-              <h1 className="text-lg lg:text-xl font-bold text-yellow-400">TIMESHARE</h1>
-              <p className="text-xs lg:text-sm text-gray-300">SECRETS</p>
-            </div>
+            <img src={logo} alt="Timeshare Genie Logo"
+              onClick={() => {
+                navigate('/')
+              }}
+              className="h-14" />
           </div>
 
           {/* Desktop Navigation */}

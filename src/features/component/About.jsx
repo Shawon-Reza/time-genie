@@ -1,6 +1,8 @@
 import React from 'react'
-import { FaUser, FaBell, FaFileAlt, FaRobot, FaShieldAlt } from 'react-icons/fa'
-import { FaVault } from 'react-icons/fa6'
+import { FaUser, FaBell, FaFileAlt, FaRobot, FaLock } from 'react-icons/fa'
+import about1 from '../../assets/about1.png'
+import about2 from '../../assets/about2.png'
+
 
 const About = () => {
   const aboutData = {
@@ -27,9 +29,9 @@ const About = () => {
         },
         {
           id: 2,
-          icon: FaVault,
+          icon: FaLock,
           title: "The Vault",
-          description: "Ask anything about your ownership and get clear, unbiased answers."
+          description: "Securely store and access your contracts, reports, and notices in one place."
         },
         {
           id: 3,
@@ -49,7 +51,8 @@ const About = () => {
 
   return (
     <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto">
+        
         {/* Section 1: What is Timeshare Genie? */}
         <section className="mb-20">
           <div className="text-center mb-16">
@@ -57,35 +60,27 @@ const About = () => {
               {aboutData.section1.title}
             </h2>
           </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+          <div className="grid grid-cols-12 gap-12 items-center">
             {/* Left side - Illustration */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="col-span-5 flex justify-center ">
               <div className="relative">
                 {/* Large Question Mark Background */}
-                <div className="w-64 h-64 md:w-80 md:h-80 bg-yellow-500 rounded-full flex items-center justify-center text-8xl md:text-9xl font-bold text-slate-800 relative overflow-hidden">
-                  ?
-                  {/* Small AI Robot Icon */}
-                  <div className="absolute bottom-8 left-8 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center">
-                    <FaRobot className="text-white text-xl" />
-                  </div>
-                  {/* Floating Elements */}
-                  <div className="absolute top-4 right-8 w-8 h-8 bg-white rounded-full"></div>
-                  <div className="absolute top-16 left-4 w-6 h-6 bg-gray-300 rounded-full"></div>
-                  <div className="absolute bottom-20 right-4 w-10 h-10 bg-orange-400 rounded-full"></div>
+                <div>
+                  <img src={about1} alt={aboutData.section1.illustration.alt} className="w-full h-full" />
                 </div>
               </div>
             </div>
 
             {/* Right side - Content */}
-            <div className="text-white">
+            <div className="text-white col-span-7">
               <h3 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-6">
                 {aboutData.section1.subtitle}
               </h3>
               <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
                 {aboutData.section1.description}
               </p>
-              <button className="bg-transparent border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-800 px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200">
+              <button className="bg-transparent border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-800 px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200 w-full sm:w-auto text-center">
                 {aboutData.section1.buttonText}
               </button>
             </div>
@@ -100,42 +95,25 @@ const About = () => {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
             {/* Left side - App mockup and intro */}
-            <div>
+            <div className="lg:col-span-5 xl:col-span-4 mb-12 lg:mb-0">
               <div className="mb-8">
-                <p className="text-yellow-400 text-lg mb-2">{aboutData.section2.subtitle}</p>
-                <h3 className="text-2xl md:text-3xl font-bold text-yellow-400 mb-8">
+                <p className="text-yellow-400 text-lg mb-2 opacity-90">{aboutData.section2.subtitle}</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-8">
                   "{aboutData.section2.quote}"
                 </h3>
               </div>
-              
+
               {/* App Mockup */}
               <div className="flex justify-center lg:justify-start">
                 <div className="relative">
                   {/* Phone mockup */}
-                  <div className="w-48 h-80 bg-gray-800 rounded-3xl p-4 border-4 border-gray-600 shadow-2xl">
-                    <div className="w-full h-full bg-white rounded-2xl relative overflow-hidden">
-                      {/* Phone screen content */}
-                      <div className="p-4">
-                        <div className="flex items-center justify-between mb-4">
-                          <FaShieldAlt className="text-yellow-500 text-xl" />
-                          <div className="text-xs text-gray-500">9:41</div>
-                        </div>
-                        <div className="space-y-3">
-                          <div className="h-3 bg-gray-200 rounded"></div>
-                          <div className="h-3 bg-gray-200 rounded w-3/4"></div>
-                          <div className="h-8 bg-yellow-400 rounded"></div>
-                          <div className="space-y-2 mt-4">
-                            <div className="h-2 bg-gray-100 rounded"></div>
-                            <div className="h-2 bg-gray-100 rounded w-5/6"></div>
-                            <div className="h-2 bg-gray-100 rounded w-2/3"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <div>
+                    <img src={about2} alt="App Mockup"
+                      className="w-full h-full" />
                   </div>
-                  
+
                   {/* Tablet mockup behind phone */}
                   <div className="absolute -left-8 top-8 w-32 h-48 bg-gray-700 rounded-2xl transform rotate-12 -z-10">
                     <div className="w-full h-full bg-gray-100 rounded-xl m-2"></div>
@@ -145,21 +123,25 @@ const About = () => {
             </div>
 
             {/* Right side - Feature cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {aboutData.section2.features.map((feature) => (
-                <div key={feature.id} className="bg-slate-800/50 border border-yellow-400/30 rounded-xl p-6 hover:border-yellow-400 transition-colors duration-200">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="text-yellow-400 text-2xl mr-3" />
+            <div className='lg:col-span-7 xl:col-span-8'>
+              <div className="grid lg:grid-cols-2 gap-6 items-center">
+                {aboutData.section2.features.map((feature) => (
+                  <div key={feature.id} className="bg-slate-800/50 border-2 border-yellow-400/30 rounded-xl p-6 hover:border-yellow-400 transition-colors duration-200">
+                    <div className="flex items-center mb-4">
+                      <feature.icon className="text-yellow-400 text-2xl mr-3" />
+                    </div>
+                    <h4 className="text-white font-bold text-lg mb-3">
+                      {feature.title}
+                    </h4>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
                   </div>
-                  <h4 className="text-white font-bold text-lg mb-3">
-                    {feature.title}
-                  </h4>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+
+
           </div>
         </section>
       </div>
