@@ -17,7 +17,7 @@ const LandingPage = () => {
             </section>
 
             {/* Hero Section */}
-            <section id="home" className="pt-16 md:pt-28 lg:pt-20 xl:pt-6 ">
+            <section id="home" className="pt-8 md:pt-15  xl:pt-0 ">
                 <HeroSection />
             </section>
 
