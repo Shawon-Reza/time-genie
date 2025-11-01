@@ -1,15 +1,17 @@
 import React from 'react'
-import { FaCertificate, FaGift, FaCrown, FaCheck } from 'react-icons/fa'
+import { FaCheck } from 'react-icons/fa'
+import { GiCheckMark } from 'react-icons/gi'
+import { IoMdCheckmark } from 'react-icons/io'
 
 const PremiumPackage = () => {
   return (
-    <section className=" bg-[#0b2940]">
+    <section className="  px-4 sm:px-6 lg:px-8">
       <div className="w-full">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">Premium Package</h2>
+        <div className="text-center mb-8 xl:mb-12">
+          <h2 className="text-3xl sm:text-4xl xl:text-5xl font-bold text-white">Premium Package</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-6 items-start">
           <PricingCard
             ribbonText="Best For New Owners"
             price="$0.00/mth"
@@ -76,10 +78,10 @@ const PremiumPackage = () => {
 function PricingCard({ ribbonText, price, tier, smallNote, ctaText, features, variant = 'outline' }) {
   const primary = variant === 'primary'
   return (
-    <div className={`relative bg-linear-to-b from-[#0f2a3f] to-[#0b2130] border ${primary ? 'border-yellow-400/80' : 'border-yellow-400/30'} rounded-2xl p-0 overflow-hidden flex flex-col justify-between min-h-[520px]`}>
+  <div className={`relative bg-linear-to-b from-[#0f2a3f] to-[#0b2130] border ${primary ? 'border-yellow-400/80' : 'border-yellow-400/30'} rounded-2xl p-0 overflow-hidden flex flex-col justify-between min-h-[520px]`}>
       {/* top ribbon */}
       <div className="bg-white rounded-t-lg text-center py-2">
-        <span className="text-xs text-yellow-600 font-semibold tracking-wider">{ribbonText}</span>
+        <span className="text-sm sm:text-lg text-yellow-600 font-semibold tracking-wider">{ribbonText}</span>
       </div>
 
       <div className="p-6 flex-1 flex flex-col justify-between">
@@ -93,11 +95,13 @@ function PricingCard({ ribbonText, price, tier, smallNote, ctaText, features, va
 
           <div className="space-y-3 text-sm text-gray-300 mb-6">
             {features.map((f, i) => (
-              <div className="flex items-start" key={i}>
-                <div className="w-7 h-7 rounded-full bg-yellow-500/20 flex items-center justify-center mr-3 mt-1">
-                  <FaCheck className="text-yellow-400 text-[12px]" />
+              <div className="flex items-start gap-1" key={i}>
+                <div className="shrink-0 w-7 h-7 rounded-full bg-[#FFF6D2] flex items-center justify-center mr-3 mt-1 p-1.5">
+                  <GiCheckMark 
+                  size={20}
+                  className="text-[#D7AB42] text-[12px]" />
                 </div>
-                <div>{f}</div>
+                <div className='text-sm sm:text-lg md:text-xl'>{f}</div>
               </div>
             ))}
           </div>

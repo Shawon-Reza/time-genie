@@ -30,8 +30,8 @@ const DownloadStore = () => {
           <p className="text-center text-xs text-gray-500 mt-3">Available for iOS and Android. Concierge clarity, anywhere.</p>
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-xl md:text-2xl text-yellow-400 max-w-2xl mx-auto">“Built exclusively for discerning owners of Hilton, Marriott, Disney, Wyndham, and leading exchange companies. Independent. Professional. Always on your side.”</p>
+        <div className="mt-16 mb-8 text-center">
+          <p className="text-xl md:text-2xl text-yellow-400 max-w-4xl mx-auto opacity-80">“Built exclusively for discerning owners of Hilton, Marriott, Disney, Wyndham, and leading exchange companies. Independent. Professional. Always on your side.”</p>
 
           <div className="mt-8">
             <button className="bg-yellow-500 text-slate-800 px-6 py-3 rounded-md font-semibold">Unlock Your Timeshare Genie Free</button>

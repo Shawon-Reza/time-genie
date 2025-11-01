@@ -50,7 +50,7 @@ const About = () => {
   }
 
   return (
-    <div className="py-16 px-4">
+    <div className=" px-4 sm:px-6 lg:px-8">
       <div className="mx-auto">
         
         {/* Section 1: What is Timeshare Genie? */}
@@ -61,7 +61,7 @@ const About = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-12 gap-12 items-center">
+          <div className="sm:grid grid-cols-12 gap-12 items-center space-y-5">
             {/* Left side - Illustration */}
             <div className="col-span-5 flex justify-center ">
               <div className="relative">
@@ -89,7 +89,7 @@ const About = () => {
 
         {/* Section 2: Why Owners Trust Timeshare Genie? */}
         <section>
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 -mt-10 lg:mt-24">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">
               {aboutData.section2.title}
             </h2>

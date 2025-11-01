@@ -32,7 +32,7 @@ const QuickPackageCompare = () => {
         </div>
 
         <div className="mt-6">
-          <p className="text-center text-lg md:text-xl text-yellow-400">“ Timeshare Secrets™ — Simple tools that protect value and prevent stress.”</p>
+          <p className="text-center text-lg md:text-2xl lg:text-3xl text-yellow-400">“ Timeshare Secrets™ — Simple tools that protect value and prevent stress.”</p>
         </div>
       </div>
     </section>

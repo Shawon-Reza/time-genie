@@ -7,8 +7,8 @@ const StartFreeToday = () => {
       <div className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
           {/* Left: copy */}
-          <div className="px-2 md:px-6 lg:px-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+          <div className="">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
               “Start Free Today — Your
               <span className="block">Genie is Waiting.”</span>
             </h2>

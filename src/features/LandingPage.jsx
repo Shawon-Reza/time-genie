@@ -10,41 +10,46 @@ import DownloadStore from './component/DownloadStore'
 
 const LandingPage = () => {
     return (
-        <div className="min-h-screen bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 px-2 sm:px-4 md:px-8 lg:px-16">
+        <div className="min-h-screen bg-[#0F2846]">
             {/* Navbar */}
-            <section>
+            <section className='pt-1'>
                 <NavBar />
             </section>
 
             {/* Hero Section */}
-            <section id="home" className="min-h-screen">
+            <section id="home" className="">
                 <HeroSection />
             </section>
 
-            {/* About Section */}
-            <section id="about" className="min-h-screen">
-                <About />
-            </section>
+            <div className='px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12'>
+                {/* About Section */}
+                <section id="about" className="mt-12 sm:mt-24 md:mt-36 lg:mt-10">
+                    <About />
+                </section>
 
-            {/* Free Package Section */}
-            <section id="free-package" className="min-h-screen">
-                <FreePackage />
-            </section>
+                {/* Free Package Section */}
+                <section id="free-package" className="mt-16 lg:mt-28 xl:mt-28 2xl:mt-0">
+                    <FreePackage />
+                </section>
 
-            {/* Premium Package Section */}
-            <section id="premium-package" className="">
-                <PremiumPackage></PremiumPackage>
-            </section>
+                {/* Premium Package Section */}
+                <section id="premium-package" className="mt-12 lg:mt-20 xl:mt-20 ">
+                    <PremiumPackage></PremiumPackage>
+                </section>
 
-            <section id="quick-compare" className="">
-                <QuickPackageCompare />
-            </section>
+                <section id="quick-compare" className="lg:mt-5 xl:mt-10">
+                    <QuickPackageCompare />
+                </section>
 
-            <section id="downloadstore" className="">
-                <DownloadStore />
-            </section>
+                <section id="downloadstore" className="px-4 sm:px-6 lg:px-8 md:mt-7 xl:my-12">
+                    <DownloadStore />
+                </section>
 
-            <Footer />
+            </div>
+            {/* Footer */}
+            <section className='bg-[#0A1A2F]'>
+                <Footer />
+            </section>
         </div>
     )
 }

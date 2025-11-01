@@ -2,20 +2,37 @@ import React from 'react'
 import herologo from '../../assets/herologo.png'
 import hero1 from '../../assets/hero1.png'
 import hero2 from '../../assets/hero2.png'
+import DotGrid from '../background/DotGrid'
 
 const HeroSection = () => {
     return (
-        <section className="min-h-screen flex items-center pt-20 pb-16 ">
-            <div className="mx-auto w-full px-6">
+        <section className="relative min-h-screen flex items-center pb-16 bg-linear-to-r from-[#072034] via-[#0b2940] to-[#0f3b57] px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12 sm:pb-48 md:pb-56 lg:pb-0">
+            {/* Background dots animation (full-section) */}
+            <div className="absolute inset-0 z-0 pointer-events-none">
+                <DotGrid
+                    dotSize={10}
+                    gap={15}
+                    baseColor="#1E1E20"
+                    activeColor="#66ADD3"
+                    proximity={120}
+                    shockRadius={250}
+                    shockStrength={5}
+                    resistance={750}
+                    returnDuration={1.5}
+                    style={{ width: '100%', height: '100%' }}
+                />
+            </div>
+
+            <div className="mx-auto w-full px-6 relative z-10 ">
                 {/* Top logo centered */}
-                <div className="flex justify-center mb-10">
-                    <img src={herologo} alt="Timeshare Secrets Logo" className="w-44 md:w-56 lg:w-64 xl:w-72" />
+                <div className="flex justify-center mb-15">
+                    <img src={herologo} alt="Timeshare Secrets Logo" className="w-44 md:w-56 lg:w-64 xl:w-72 2xl:w-80" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 xl:gap-16 items-center">
                     {/* Left: Headline + description + buttons */}
-                    <div className="text-white px-2 md:px-4">
-                        <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">
+                    <div className="text-white px-2 md:px-4 ">
+                        <h1 className="text-2xl md:text-3xl lg:text-5xl font-extrabold leading-tight mb-6">
                             <span className="block">You invested in memories.</span>
                             <span className="block">Not in frustration</span>
                         </h1>
@@ -36,21 +53,16 @@ const HeroSection = () => {
                     </div>
 
                     {/* Right: Overlapping images card */}
-                    <div className="flex justify-center md:justify-end px-2 md:px-4">
-                        {/* Mobile stacked images */}
-                        <div className="md:hidden flex flex-col items-center gap-4">
-                            <img src={hero1} alt="Creating memories" className="w-72 sm:w-80 object-cover rounded-2xl shadow-2xl" />
-                            <img src={hero2} alt="Professional consultation" className="w-56 sm:w-64 object-cover rounded-2xl shadow-xl" />
-                        </div>
+                    <div className=" px-2 md:px-4  flex flex-col justify-center items-center">
 
                         {/* Desktop overlapping images */}
-                        <div className="hidden md:block relative w-[320px] sm:w-[420px] lg:w-[480px]">
-                            <div className="rounded-3xl p-4 lg:p-6">
-                                <div className="relative h-80 lg:h-[400px]">
-                                    <img src={hero2} alt="Professional consultation" className="absolute left-4 bottom-4 w-44 sm:w-48 md:w-56 h-28 sm:h-32 md:h-48 object-cover rounded-2xl shadow-xl border-4 border-white/5 z-20" />
-                                    <img src={hero1} alt="Creating memories" className="absolute right-0 top-0 w-56 sm:w-64 md:w-72 h-64 sm:h-72 md:h-80 object-cover rounded-3xl shadow-2xl z-10" />
-                                </div>
-                            </div>
+                        <div className="mt-40 lg:mt-0  items-center justify-center px-20 relative w-[250px] sm:w-[420px] lg:w-[480px]">
+
+
+                            <img src={hero1} alt="Creating memories" className="w-full h-auto object-cover rounded-2xl shadow-2xl max-h-[400px] absolute -top-50" />
+
+                            <img src={hero2} alt="Professional consultation" className="w-[70%] object-cover rounded-2xl shadow-2xl max-h-[250px] absolute -left-10 xl:-left-20  -top-12.5" />
+
                         </div>
                     </div>
                 </div>
