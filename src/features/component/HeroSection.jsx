@@ -50,7 +50,7 @@ const HeroSection = () => {
                     {/* Left: Headline + description + buttons */}
                     <div className="text-white px-2 md:px-4 ">
                         <h1 className="text-2xl md:text-3xl lg:text-5xl font-extrabold leading-tight mb-6">
-                            <span className="block">You invested in memories.</span>
+                            <span className="block font-c">You invested in memories.</span>
                             <span className="block">Not in frustration</span>
                         </h1>
 

@@ -3,6 +3,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+@font-face {
+  font-family: 'customfont';
+  src: url('/src//assets//fonts//SpaceGrotesk-Regular.ttf') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -40,6 +51,8 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --animate-shine: shine var(--duration) infinite linear;
+  /* Custom font set */
+  --font-customfont: 'customfont', 'sans-serif';
 
   @keyframes shine {
     0% {
@@ -132,5 +145,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-customfont);
   }
 }

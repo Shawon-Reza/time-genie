@@ -10,7 +10,7 @@ import DownloadStore from './component/DownloadStore'
 
 const LandingPage = () => {
     return (
-        <div className="min-h-screen bg-[#0F2846]">
+        <div className="min-h-screen bg-[#0F2846] ">
             {/* Navbar */}
             <section className='pt-1 fixed w-full z-50 bg-[#0A1A2F]/80 backdrop-blur-md '>
                 <NavBar />
