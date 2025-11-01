@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaRegUser, FaFolderOpen, FaBookOpen, FaEnvelope } from 'react-icons/fa'
 import img from '../../assets/freemic.png'
+import { BorderBeam } from '@/components/ui/border-beam'
 
 const FreePackageDetails = () => {
   return (
@@ -54,7 +55,21 @@ const FreePackageDetails = () => {
 
 function Card({ title, icon, children }) {
   return (
-    <div className="bg-transparent border border-yellow-400/30 rounded-lg p-6 min-h-[120px]">
+    <div className="relative overflow-hidden bg-transparent border border-yellow-400/30 rounded-lg p-6 min-h-[120px]">
+
+       <BorderBeam
+        duration={20}
+        size={400}
+        className="from-transparent via-[#D7AB42] to-transparent"
+      />
+      <BorderBeam
+        duration={20}
+        delay={3}
+        size={400}
+        borderWidth={2}
+        className="from-transparent via-blue-500 to-transparent"
+      />
+
       <div className="flex items-start space-x-4">
         <div className="mt-1">{icon}</div>
         <div>

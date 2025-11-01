@@ -5,7 +5,7 @@ const StartFreeToday = () => {
   return (
     <section className="  text-white">
       <div className="w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 b ">
           {/* Left: copy */}
           <div className="">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6">

@@ -77,8 +77,17 @@ const PremiumPackage = () => {
 
 function PricingCard({ ribbonText, price, tier, smallNote, ctaText, features, variant = 'outline' }) {
   const primary = variant === 'primary'
+
+
+
+
   return (
-  <div className={`relative bg-linear-to-b from-[#0f2a3f] to-[#0b2130] border ${primary ? 'border-yellow-400/80' : 'border-yellow-400/30'} rounded-2xl p-0 overflow-hidden flex flex-col justify-between min-h-[520px]`}>
+    <div className={`relative bg-linear-to-b from-[#0f2a3f] to-[#0b2130] border ${primary ? 'border-yellow-400/80' : 'border-yellow-400/30'} rounded-2xl p-0 overflow-hidden flex flex-col justify-between min-h-[520px]`}>
+
+  
+
+
+
       {/* top ribbon */}
       <div className="bg-white rounded-t-lg text-center py-2">
         <span className="text-sm sm:text-lg text-yellow-600 font-semibold tracking-wider">{ribbonText}</span>
@@ -97,9 +106,9 @@ function PricingCard({ ribbonText, price, tier, smallNote, ctaText, features, va
             {features.map((f, i) => (
               <div className="flex items-start gap-1" key={i}>
                 <div className="shrink-0 w-7 h-7 rounded-full bg-[#FFF6D2] flex items-center justify-center mr-3 mt-1 p-1.5">
-                  <GiCheckMark 
-                  size={20}
-                  className="text-[#D7AB42] text-[12px]" />
+                  <GiCheckMark
+                    size={20}
+                    className="text-[#D7AB42] text-[12px]" />
                 </div>
                 <div className='text-sm sm:text-lg md:text-xl'>{f}</div>
               </div>

@@ -12,36 +12,37 @@ const LandingPage = () => {
     return (
         <div className="min-h-screen bg-[#0F2846]">
             {/* Navbar */}
-            <section className='pt-1'>
+            <section className='pt-1 fixed w-full z-50 bg-[#0A1A2F]/80 backdrop-blur-md '>
                 <NavBar />
             </section>
 
             {/* Hero Section */}
-            <section id="home" className="">
+            <section id="home" className="pt-16 md:pt-28 lg:pt-20 xl:pt-6 ">
                 <HeroSection />
             </section>
 
-            <div className='px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12'>
+            {/* px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12 */}
+            <div className=''>
                 {/* About Section */}
-                <section id="about" className="mt-12 sm:mt-24 md:mt-36 lg:mt-10">
+                <section id="about" className="mt-12 sm:mt-24 md:mt-36 lg:mt-10 px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12">
                     <About />
                 </section>
 
                 {/* Free Package Section */}
-                <section id="free-package" className="mt-16 lg:mt-28 xl:mt-28 2xl:mt-0">
+                <section id="free-package" className="mt-16 lg:mt-28 xl:mt-28 2xl:mt-0 ">
                     <FreePackage />
                 </section>
 
                 {/* Premium Package Section */}
-                <section id="premium-package" className="mt-12 lg:mt-20 xl:mt-20 ">
+                <section id="premium-package" className="mt-12 lg:mt-20 xl:mt-20 px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12">
                     <PremiumPackage></PremiumPackage>
                 </section>
 
-                <section id="quick-compare" className="lg:mt-5 xl:mt-10">
+                <section id="quick-compare" className="lg:mt-5 xl:mt-10 px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12">
                     <QuickPackageCompare />
                 </section>
 
-                <section id="downloadstore" className="px-4 sm:px-6 lg:px-8 md:mt-7 xl:my-12">
+                <section id="downloadstore" className="px-4 sm:px-6 lg:px-8 md:mt-7 xl:my-12 px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12">
                     <DownloadStore />
                 </section>
 

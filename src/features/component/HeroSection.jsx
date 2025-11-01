@@ -25,7 +25,7 @@ const HeroSection = () => {
 
             <div className="mx-auto w-full px-6 relative z-10 ">
                 {/* Top logo centered */}
-                <div className="flex justify-center mb-15">
+                <div className="flex justify-center pb-15">
                     <img src={herologo} alt="Timeshare Secrets Logo" className="w-44 md:w-56 lg:w-64 xl:w-72 2xl:w-80" />
                 </div>
 

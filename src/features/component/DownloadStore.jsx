@@ -1,12 +1,13 @@
 import React from 'react'
 import { FaLock, FaMobileAlt, FaBell } from 'react-icons/fa'
+import { BsStars } from "react-icons/bs";
 
 const DownloadStore = () => {
   return (
     <section className="">
       <div className="w-full">
         <div className="bg-cream-50/95 rounded-xl p-8 md:p-12 mx-auto" style={{backgroundColor: '#fcf6e9'}}>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#081826] text-center">Timeshare Genie — Now in Your Pocket</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#081826] text-center flex gap-2"> <BsStars color='#D7AB42' /> Timeshare Genie — Now in Your Pocket</h2>
           <p className="text-center text-sm md:text-base text-gray-600 mt-4  mx-auto">Enjoy 24/7 ownership clarity from your phone. Get personalized answers, manage documents, and receive policy updates — all in one elegant app.</p>
 
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 items-center text-center">

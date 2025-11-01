@@ -1,3 +1,4 @@
+import { ShineBorder } from '@/components/ui/shine-border'
 import React from 'react'
 import { FaRegLightbulb } from 'react-icons/fa'
 
@@ -43,7 +44,14 @@ function CompareCard({ title, features, variant = 'gold' }) {
   const borderClass = variant === 'white' ? 'border-white' : 'border-yellow-400'
   const bgClass = variant === 'white' ? 'bg-transparent' : 'bg-gradient-to-b from-[#152936] to-[#26343a]/40'
   return (
-    <div className={`p-6 rounded-xl ${bgClass} border-2 ${borderClass} border-opacity-40`}>
+    <div className={`p-6 rounded-xl  border-opacity-40 relative overflow-hidden`}>
+      <ShineBorder
+        shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+        size={300}
+        duration={20}
+        borderWidth={2}
+      />
+
       <div className="flex items-start mb-4">
         <div className="text-yellow-400 mr-3"><FaRegLightbulb /></div>
         <h3 className="text-white text-lg font-semibold">{title}</h3>

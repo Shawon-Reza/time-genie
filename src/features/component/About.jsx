@@ -2,9 +2,12 @@ import React from 'react'
 import { FaUser, FaBell, FaFileAlt, FaRobot, FaLock } from 'react-icons/fa'
 import about1 from '../../assets/about1.png'
 import about2 from '../../assets/about2.png'
+import { BorderBeam } from '@/components/ui/border-beam'
+
 
 
 const About = () => {
+
   const aboutData = {
     section1: {
       title: "What is Timeshare Genie?",
@@ -49,10 +52,12 @@ const About = () => {
     }
   }
 
+
+
   return (
     <div className=" px-4 sm:px-6 lg:px-8">
       <div className="mx-auto">
-        
+
         {/* Section 1: What is Timeshare Genie? */}
         <section className="mb-20">
           <div className="text-center mb-16">
@@ -126,7 +131,12 @@ const About = () => {
             <div className='lg:col-span-7 xl:col-span-8'>
               <div className="grid lg:grid-cols-2 gap-6 items-center">
                 {aboutData.section2.features.map((feature) => (
-                  <div key={feature.id} className="bg-slate-800/50 border-2 border-yellow-400/30 rounded-xl p-6 hover:border-yellow-400 transition-colors duration-200">
+                  <div key={feature.id} className="relative overflow-hidden border-1 border-yellow-400/30 rounded-xl p-6 hover:border-yellow-400 transition-colors duration-700">
+
+                    <BorderBeam
+                      duration={15}
+                      size={150} />
+
                     <div className="flex items-center mb-4">
                       <feature.icon className="text-yellow-400 text-2xl mr-3" />
                     </div>
