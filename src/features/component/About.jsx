@@ -94,8 +94,8 @@ const About = () => {
 
         {/* Section 2: Why Owners Trust Timeshare Genie? */}
         <section>
-          <div className="text-center mb-16 -mt-10 lg:mt-24">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">
+          <div className="text-center mb-16 xl:mb-10  -mt-10 lg:mt-24">
+            <h2 className="text-3xl md:text-5xl font-bold text-white  ">
               {aboutData.section2.title}
             </h2>
           </div>

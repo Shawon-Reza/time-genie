@@ -5,8 +5,8 @@ const Footer = () => {
     <footer className=" text-gray-300 py-8 px-4">
       <div className=" mx-auto text-center">
         <nav className="flex flex-wrap justify-center gap-6 mb-4">
-          <a href="#" className="text-gray-300 hover:text-white text-sm">Privacy</a>
-          <a href="#" className="text-gray-300 hover:text-white text-sm">Terms</a>
+          <a href="/privacy" className="text-gray-300 hover:text-white text-sm">Privacy</a>
+          <a href="/terms" className="text-gray-300 hover:text-white text-sm">Terms</a>
           <a href="#" className="text-gray-300 hover:text-white text-sm">Why Owners Trust Genie</a>
           <a href="#" className="text-gray-300 hover:text-white text-sm">App Download</a>
           <a href="#" className="text-gray-300 hover:text-white text-sm">Free Membership</a>

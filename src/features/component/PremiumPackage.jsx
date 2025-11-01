@@ -11,7 +11,7 @@ const PremiumPackage = () => {
           <h2 className="text-3xl sm:text-4xl xl:text-5xl font-bold text-white">Premium Package</h2>
         </div>
 
-        <div className="grid grid-cols-1  lg:grid-cols-3 gap-6 items-start">
+        <div className="grid grid-cols-1  lg:grid-cols-3 gap-6 items-start max-w-7xl mx-auto">
           <PricingCard
             ribbonText="Best For New Owners"
             price="$0.00/mth"
@@ -82,7 +82,7 @@ function PricingCard({ ribbonText, price, tier, smallNote, ctaText, features, va
 
 
   return (
-    <div className={`relative bg-linear-to-b from-[#0f2a3f] to-[#0b2130] border ${primary ? 'border-yellow-400/80' : 'border-yellow-400/30'} rounded-2xl p-0 overflow-hidden flex flex-col justify-between min-h-[520px]`}>
+    <div className={`relative bg-linear-to-b from-[#0f2a3f] to-[#0b2130] border ${primary ? 'border-yellow-400/80' : 'border-yellow-400/30'} rounded-2xl p-0 overflow-hidden flex flex-col justify-between min-h-[520px] `}>
 
   
 

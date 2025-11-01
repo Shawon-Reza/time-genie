@@ -30,9 +30,10 @@ const NavBar = () => {
           <div className="flex items-center space-x-3">
             <img src={logo} alt="Timeshare Genie Logo"
               onClick={() => {
-                navigate('/')
+                scrollToSection("#home");
+                navigate("/");
               }}
-              className="h-14" />
+              className="h-14 cursor-pointer" />
           </div>
 
           {/* Desktop Navigation */}
