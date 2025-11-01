@@ -4,6 +4,37 @@ import { GiCheckMark } from 'react-icons/gi'
 import { IoMdCheckmark } from 'react-icons/io'
 
 const PremiumPackage = () => {
+  const scrollToSection = (href) => {
+    // Normalize selector
+    const selector = href && href.startsWith('#') ? href : `#${href}`
+
+    const element = document.querySelector(selector)
+    if (element) {
+      // account for fixed header height so the section isn't hidden
+      const header = document.querySelector('nav') || document.querySelector('header')
+      const headerHeight = header ? header.getBoundingClientRect().height : 80
+      const top = element.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12
+      window.scrollTo({ top, behavior: 'smooth' })
+      return
+    }
+
+    // fallback: set hash and try again after a short delay (useful when on another route)
+    try {
+      window.location.hash = selector
+    } catch (e) {
+      // ignore
+    }
+    setTimeout(() => {
+      const el2 = document.querySelector(selector)
+      if (el2) {
+        const header = document.querySelector('nav') || document.querySelector('header')
+        const headerHeight = header ? header.getBoundingClientRect().height : 80
+        const top = el2.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12
+        window.scrollTo({ top, behavior: 'smooth' })
+      }
+    }, 250)
+  }
+
   return (
     <section className="  px-4 sm:px-6 lg:px-8">
       <div className="w-full">
@@ -18,6 +49,7 @@ const PremiumPackage = () => {
             tier="Silver"
             smallNote="Forever Free"
             ctaText="Join Free"
+            scrollToSection={scrollToSection}
             variant="outline"
             features={[
               "Instant Snapshot after linking HGV/Hilton/RCI/Interval: what you own + next 3 deadlines.",
@@ -35,6 +67,7 @@ const PremiumPackage = () => {
             tier="Gold Elite"
             smallNote="14 Day Free Trial"
             ctaText="Start Free 7-Day Trial"
+            scrollToSection={scrollToSection}
             variant="primary"
             features={[
               "Ask the Genie: 100 questions/month (ask from any screen).",
@@ -54,6 +87,7 @@ const PremiumPackage = () => {
             tier="Platinum Premier"
             smallNote="Surprise Deals"
             ctaText="Go Platinum"
+            scrollToSection={scrollToSection}
             variant="primary"
             features={[
               "Unlimited Genie + Deep Research (long docs, side-by-side comparisons).",
@@ -75,16 +109,15 @@ const PremiumPackage = () => {
   )
 }
 
-function PricingCard({ ribbonText, price, tier, smallNote, ctaText, features, variant = 'outline' }) {
+function PricingCard({ ribbonText, price, tier, smallNote, ctaText, features, variant = 'outline', scrollToSection }) {
   const primary = variant === 'primary'
-
 
 
 
   return (
     <div className={`relative bg-linear-to-b from-[#0f2a3f] to-[#0b2130] border ${primary ? 'border-yellow-400/80' : 'border-yellow-400/30'} rounded-2xl p-0 overflow-hidden flex flex-col justify-between min-h-[520px] `}>
 
-  
+
 
 
 
@@ -117,7 +150,11 @@ function PricingCard({ ribbonText, price, tier, smallNote, ctaText, features, va
         </div>
 
         <div className="mt-4">
-          <button className={`w-full ${primary ? 'bg-yellow-500 text-slate-800 hover:bg-yellow-600' : 'bg-transparent border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-800'} py-3 rounded-md font-semibold transition`}>{ctaText}</button>
+          <button
+          onClick={() => {
+            scrollToSection('#downloadstore')
+          }}
+          className={`w-full ${primary ? 'bg-yellow-500 text-slate-800 hover:bg-yellow-600' : 'bg-transparent border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-800'} py-3 rounded-md font-semibold transition`}>{ctaText}</button>
         </div>
       </div>
     </div>

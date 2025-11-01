@@ -2,6 +2,13 @@ import React from 'react'
 import about1 from '../../assets/about2.png'
 
 const StartFreeToday = () => {
+  const scrollToSection = (href) => {
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    setIsMobileMenuOpen(false)
+  }
   return (
     <section className="  text-white">
       <div className="w-full">
@@ -22,7 +29,11 @@ const StartFreeToday = () => {
                 Download Timeshare Genie Free
               </button>
 
-              <button className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-800 px-6 py-3 rounded-lg font-semibold text-base md:text-lg w-full sm:w-auto">
+              <button
+              onClick={()=>{
+                scrollToSection("#downloadstore")
+              }}
+              className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-800 px-6 py-3 rounded-lg font-semibold text-base md:text-lg w-full sm:w-auto">
                 Free Package
               </button>
             </div>

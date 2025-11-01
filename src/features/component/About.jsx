@@ -7,6 +7,13 @@ import { BorderBeam } from '@/components/ui/border-beam'
 
 
 const About = () => {
+  const scrollToSection = (href) => {
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+    setIsMobileMenuOpen(false)
+  }
 
   const aboutData = {
     section1: {
@@ -85,7 +92,11 @@ const About = () => {
               <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
                 {aboutData.section1.description}
               </p>
-              <button className="bg-transparent border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-800 px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200 w-full sm:w-auto text-center">
+              <button
+              onClick={()=>{
+                scrollToSection("#downloadstore")
+              }}
+              className="bg-transparent border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-800 px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-200 w-full sm:w-auto text-center">
                 {aboutData.section1.buttonText}
               </button>
             </div>

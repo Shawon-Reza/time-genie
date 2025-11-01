@@ -7,6 +7,16 @@ import { useNavigate } from 'react-router-dom'
 
 const HeroSection = () => {
     const navigate = useNavigate()
+    const scrollToSection = (href) => {
+        const element = document.querySelector(href)
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+        }
+        setIsMobileMenuOpen(false)
+    }
+
+
+
     return (
         <section className="relative min-h-screen flex items-center pb-16 bg-linear-to-r from-[#072034] via-[#0b2940] to-[#0f3b57] px-2 sm:px-4 md:px-8 lg:px-10 xl:px-12 sm:pb-48 md:pb-56 lg:pb-0">
             {/* Background dots animation (full-section) */}
@@ -32,7 +42,7 @@ const HeroSection = () => {
                         src={herologo}
                         alt="Timeshare Secrets Logo"
                         className="w-44 md:w-56 lg:w-64 xl:w-72 2xl:w-80 "
-                        
+
                     />
                 </div>
 
@@ -53,7 +63,11 @@ const HeroSection = () => {
                                 Unlock My Timeshare Genie Free
                             </button>
 
-                            <button className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-800 px-6 py-3 rounded-lg font-semibold text-base md:text-lg transition-all duration-200 w-full sm:w-auto">
+                            <button
+                                onClick={() => {
+                                    scrollToSection("#downloadstore");
+                                }}
+                                className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-slate-800 px-6 py-3 rounded-lg font-semibold text-base md:text-lg transition-all duration-200 w-full sm:w-auto">
                                 Download App
                             </button>
                         </div>

@@ -23,7 +23,7 @@ const NavBar = () => {
   }
 
   return (
-    <nav className="relative  text-white">
+    <nav className="relative  text-white z-100">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -51,7 +51,9 @@ const NavBar = () => {
 
           {/* Download App Button */}
           <div className="hidden lg:block">
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-slate-800 px-6 py-2 rounded-lg font-semibold text-sm transition-colors duration-200 shadow-lg hover:shadow-xl">
+            <button
+              onClick={() => scrollToSection('#downloadstore')}
+              className="bg-yellow-500 hover:bg-yellow-600 text-slate-800 px-6 py-2 rounded-lg font-semibold text-sm transition-colors duration-200 shadow-lg hover:shadow-xl">
               Download App
             </button>
           </div>
@@ -86,7 +88,11 @@ const NavBar = () => {
               </button>
             ))}
             <div className="pt-4 border-t border-slate-700">
-              <button className="w-full bg-yellow-500 hover:bg-yellow-600 text-slate-800 px-6 py-3 rounded-lg font-semibold text-sm transition-colors duration-200">
+              <button 
+              onClick={()=>{
+                scrollToSection("#downloadstore");
+              }}
+              className="w-full bg-yellow-500 hover:bg-yellow-600 text-slate-800 px-6 py-3 rounded-lg font-semibold text-sm transition-colors duration-200">
                 Download App
               </button>
             </div>
