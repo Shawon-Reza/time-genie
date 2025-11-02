@@ -35,9 +35,9 @@ const HeroSection = () => {
                 />
             </div>
 
-            <div className="mx-auto w-full px-6 relative z-10 ">
+            <div className="mx-auto w-full px-6 relative z-10 pb-20 ">
                 {/* Top logo centered */}
-                <div className="flex justify-center pb-15 pt-20">
+                <div className="flex justify-center pb-15 pt-20 sm:pb-0">
                     <img
                         src={herologo}
                         alt="Timeshare Secrets Logo"
@@ -77,7 +77,7 @@ const HeroSection = () => {
                     <div className=" px-2 md:px-4  flex flex-col justify-center items-center">
 
                         {/* Desktop overlapping images */}
-                        <div className="mt-40 lg:mt-0  items-center justify-center lg:px-20 xl:px-44  relative w-[250px] sm:w-[420px] lg:w-[480px]">
+                        <div className="mt-40 lg:mt-0  items-center justify-center lg:px-2 xl:px-20 2xl:px-44  relative w-[250px] sm:w-[420px] lg:w-[480px]">
 
 
                             <img src={hero1} alt="Creating memories" className="w-full h-auto object-cover rounded-2xl shadow-2xl max-h-[400px] absolute -top-50" />
