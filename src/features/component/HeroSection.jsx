@@ -59,7 +59,11 @@ const HeroSection = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                            <button className="bg-yellow-500 hover:bg-yellow-600 text-slate-800 px-6 py-3 rounded-lg font-semibold text-base md:text-lg transition-all duration-200 shadow-lg hover:shadow-xl w-full sm:w-auto">
+                            <button
+                            onClick={()=>{
+                                scrollToSection("#premium-package")
+                            }}
+                            className="bg-yellow-500 hover:bg-yellow-600 text-slate-800 px-6 py-3 rounded-lg font-semibold text-base md:text-lg transition-all duration-200 shadow-lg hover:shadow-xl w-full sm:w-auto">
                                 Unlock My Timeshare Genie Free
                             </button>
 
