@@ -15,10 +15,22 @@ const NavBar = () => {
   ]
 
   const scrollToSection = (href) => {
-    const element = document.querySelector(href)
+    const selector = href.startsWith('#') ? href : `#${href}`
+    const element = document.querySelector(selector)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
+      setIsMobileMenuOpen(false)
+      return
     }
+
+    // If the element isn't on the current page, navigate to home then
+    // attempt to scroll after a short delay. This covers the case when
+    // the NavBar is used on other routes (e.g. Terms, Privacy).
+    navigate('/')
+    setTimeout(() => {
+      const el = document.querySelector(selector)
+      if (el) el.scrollIntoView({ behavior: 'smooth' })
+    }, 250)
     setIsMobileMenuOpen(false)
   }
 
@@ -30,8 +42,13 @@ const NavBar = () => {
           <div className="flex items-center space-x-3">
             <img src={logo} alt="Timeshare Genie Logo"
               onClick={() => {
-                scrollToSection("#home");
-                navigate("/");
+                // Ensure we are on the home route, then scroll to top/home section
+                navigate('/')
+                setTimeout(() => {
+                  const el = document.querySelector('#home')
+                  if (el) el.scrollIntoView({ behavior: 'smooth' })
+                }, 200)
+                setIsMobileMenuOpen(false)
               }}
               className="h-14 cursor-pointer" />
           </div>

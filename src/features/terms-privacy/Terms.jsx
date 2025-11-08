@@ -28,7 +28,7 @@ const Terms = () => {
     }
 
     return (
-        <main className="w-full px-4 sm:px-6 lg:px-8  bg-[#0F2846] min-h-screen">
+        <main className="w-full px-4 sm:px-6 lg:px-8  bg-[#0F2846] min-h-screen pb-20">
 
             <section className='mb-10'>
                 <NavBar></NavBar>
